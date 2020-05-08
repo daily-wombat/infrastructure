@@ -33,7 +33,7 @@ To build everything, do the following...
 3. Run `./tfapply` and say `yes` when it prompts for confirmation.  It's important that you don't run `terraform apply` on its own.  The `tfapply` script does some name server syncing that is explained further down in this writeup.
 4. Navigate to the `site` folder.
 5. Run `terraform init`.  You'll be prompted to choose a workspace.  The only option right now is `prod`, so choose that.
-6. Run `tfapply` and say `yes` when it prompts for confirmation.  The creation of the CloudFront distribution takes a while.  The last time I ran this apply, it took around 10 minutes.
+6. Run `terraform apply` and say `yes` when it prompts for confirmation.  The creation of the CloudFront distribution takes a while.  The last time I ran this apply, it took around 10 minutes.
 7. Navigate to the `main-ui` folder.
 8. Run `npm run deploy`.  This will do a build and then push the contents up to your newly created S3 bucket.
 9. Wait about an hour for your DNS and certificate to be fully propagated.  The wait time varies, and I don't know enough to say why.
